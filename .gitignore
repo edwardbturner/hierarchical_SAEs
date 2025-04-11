@@ -9,5 +9,4 @@ __pycache__/
 checkpoints/
 downloaded_saes/
 .DS_Store
-eval_results/
 wandb/

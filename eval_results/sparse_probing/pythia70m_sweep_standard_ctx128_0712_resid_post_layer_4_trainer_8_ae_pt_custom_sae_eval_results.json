@@ -1,0 +1,156 @@
+{
+  "eval_type_id": "sparse_probing",
+  "eval_config": {
+    "random_seed": 42,
+    "dataset_names": [
+      "LabHC/bias_in_bios_class_set1"
+    ],
+    "probe_train_set_size": 4000,
+    "probe_test_set_size": 1000,
+    "context_length": 128,
+    "sae_batch_size": 125,
+    "llm_batch_size": 512,
+    "llm_dtype": "float32",
+    "model_name": "pythia-70m-deduped",
+    "k_values": [
+      1,
+      2,
+      5
+    ],
+    "lower_vram_usage": false
+  },
+  "eval_id": "0bd72c03-ff4a-4183-aa0d-e7b140a8acf9",
+  "datetime_epoch_millis": 1744377445479,
+  "eval_result_metrics": {
+    "llm": {
+      "llm_test_accuracy": 0.9486000418663025,
+      "llm_top_1_test_accuracy": 0.7492,
+      "llm_top_2_test_accuracy": 0.7906,
+      "llm_top_5_test_accuracy": 0.851,
+      "llm_top_10_test_accuracy": null,
+      "llm_top_20_test_accuracy": null,
+      "llm_top_50_test_accuracy": null,
+      "llm_top_100_test_accuracy": null
+    },
+    "sae": {
+      "sae_test_accuracy": 0.9468000531196594,
+      "sae_top_1_test_accuracy": 0.8134,
+      "sae_top_2_test_accuracy": 0.8577999999999999,
+      "sae_top_5_test_accuracy": 0.8906000000000001,
+      "sae_top_10_test_accuracy": null,
+      "sae_top_20_test_accuracy": null,
+      "sae_top_50_test_accuracy": null,
+      "sae_top_100_test_accuracy": null
+    }
+  },
+  "eval_result_details": [
+    {
+      "dataset_name": "LabHC/bias_in_bios_class_set1_results",
+      "llm_test_accuracy": 0.9486000418663025,
+      "llm_top_1_test_accuracy": 0.7492,
+      "llm_top_2_test_accuracy": 0.7906,
+      "llm_top_5_test_accuracy": 0.851,
+      "llm_top_10_test_accuracy": null,
+      "llm_top_20_test_accuracy": null,
+      "llm_top_50_test_accuracy": null,
+      "llm_top_100_test_accuracy": null,
+      "sae_test_accuracy": 0.9468000531196594,
+      "sae_top_1_test_accuracy": 0.8134,
+      "sae_top_2_test_accuracy": 0.8577999999999999,
+      "sae_top_5_test_accuracy": 0.8906000000000001,
+      "sae_top_10_test_accuracy": null,
+      "sae_top_20_test_accuracy": null,
+      "sae_top_50_test_accuracy": null,
+      "sae_top_100_test_accuracy": null
+    }
+  ],
+  "sae_bench_commit_hash": "8a839adff4a91e37c9c47577fdfb7eddafea55b6",
+  "sae_lens_id": "custom_sae",
+  "sae_lens_release_id": "pythia70m_sweep_standard_ctx128_0712_resid_post_layer_4_trainer_8_ae_pt",
+  "sae_lens_version": "5.8.1",
+  "sae_cfg_dict": {
+    "model_name": "pythia-70m-deduped",
+    "d_in": 512,
+    "d_sae": 4096,
+    "hook_layer": 4,
+    "hook_name": "blocks.4.hook_resid_post",
+    "context_size": null,
+    "hook_head_index": null,
+    "architecture": "vanilla",
+    "apply_b_dec_to_input": null,
+    "finetuning_scaling_factor": null,
+    "activation_fn_str": "",
+    "prepend_bos": true,
+    "normalize_activations": "none",
+    "dtype": "float32",
+    "device": "",
+    "dataset_path": "",
+    "dataset_trust_remote_code": true,
+    "seqpos_slice": [
+      null
+    ],
+    "training_tokens": 200000000,
+    "sae_lens_training_version": null,
+    "neuronpedia_id": null
+  },
+  "eval_result_unstructured": {
+    "LabHC/bias_in_bios_class_set1_results": {
+      "sae_test_accuracy": {
+        "0": 0.9220000505447388,
+        "1": 0.940000057220459,
+        "2": 0.921000063419342,
+        "6": 0.9890000224113464,
+        "9": 0.9620000720024109
+      },
+      "llm_test_accuracy": {
+        "0": 0.9050000309944153,
+        "1": 0.9530000686645508,
+        "2": 0.9280000329017639,
+        "6": 0.9920000433921814,
+        "9": 0.9650000333786011
+      },
+      "llm_top_1_test_accuracy": {
+        "0": 0.68,
+        "1": 0.704,
+        "2": 0.704,
+        "6": 0.855,
+        "9": 0.803
+      },
+      "llm_top_2_test_accuracy": {
+        "0": 0.719,
+        "1": 0.708,
+        "2": 0.756,
+        "6": 0.886,
+        "9": 0.884
+      },
+      "llm_top_5_test_accuracy": {
+        "0": 0.787,
+        "1": 0.84,
+        "2": 0.817,
+        "6": 0.897,
+        "9": 0.914
+      },
+      "sae_top_1_test_accuracy": {
+        "0": 0.787,
+        "1": 0.591,
+        "2": 0.875,
+        "6": 0.89,
+        "9": 0.924
+      },
+      "sae_top_2_test_accuracy": {
+        "0": 0.791,
+        "1": 0.776,
+        "2": 0.877,
+        "6": 0.923,
+        "9": 0.922
+      },
+      "sae_top_5_test_accuracy": {
+        "0": 0.803,
+        "1": 0.905,
+        "2": 0.867,
+        "6": 0.944,
+        "9": 0.934
+      }
+    }
+  }
+}
