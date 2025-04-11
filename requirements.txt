@@ -1,0 +1,6 @@
+torch>=2.6.0
+transformer-lens>=2.15.0
+numpy>=1.24.0
+sae-lens>=0.0.1  # for rigorous SAE training, see Matryoshka SAEs
+sae-bench>=0.4.0  # for SAE evaluation
+ipykernel>=6.25.0

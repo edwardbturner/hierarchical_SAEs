@@ -1,0 +1,13 @@
+.venv/
+.vscode/
+__pycache__/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.cache/
+.env
+checkpoints/
+downloaded_saes/
+.DS_Store
+eval_results/
+wandb/
